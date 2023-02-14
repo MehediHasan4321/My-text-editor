@@ -9,7 +9,7 @@ let upperLowerCase = ""
 //All Event Lestenter......
 document.getElementById("bold").addEventListener("click", (e) => {
 
-    if (e.isTrusted === true) {
+    if (e.type ==="click") {
         if (fontWeight === "bold") {
             fontWeight = "normal"
             textArea.style.fontWeight = fontWeight
@@ -21,7 +21,7 @@ document.getElementById("bold").addEventListener("click", (e) => {
     }
 })
 document.getElementById("italic").addEventListener("click", (e) => {
-    if (e.isTrusted === true) {
+    if (e.type ==="click") {
         if (fontStyle === "italic") {
             fontStyle = "normal"
             textArea.style.fontStyle = fontStyle;
@@ -32,7 +32,7 @@ document.getElementById("italic").addEventListener("click", (e) => {
     }
 })
 document.getElementById("underline").addEventListener("click", (e) => {
-    if (e.isTrusted === true) {
+    if (e.type ==="click") {
         if (textDecoration === "underline") {
             textDecoration = "none"
             textArea.style.textDecoration = textDecoration
@@ -43,7 +43,8 @@ document.getElementById("underline").addEventListener("click", (e) => {
     }
 });
 document.getElementById("upperLowerCase").addEventListener("click",(e)=>{
-    if(e.isTrusted ===true){
+    if(e.type ==="click"){
+        console.log(e)
         if(upperLowerCase === "lowercase"){
             upperLowerCase = "uppercase"
             textArea.style.textTransform = upperLowerCase;
