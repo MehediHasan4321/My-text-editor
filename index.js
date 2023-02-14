@@ -5,7 +5,7 @@ const textArea = document.getElementById("text-area");
 let fontWeight = ""
 let fontStyle = ""
 let textDecoration = ""
-
+let upperLowerCase = ""
 //All Event Lestenter......
 document.getElementById("bold").addEventListener("click", (e) => {
 
@@ -39,6 +39,17 @@ document.getElementById("underline").addEventListener("click", (e) => {
         } else {
             textDecoration = "underline"
             textArea.style.textDecoration = textDecoration
+        }
+    }
+});
+document.getElementById("upperLowerCase").addEventListener("click",(e)=>{
+    if(e.isTrusted ===true){
+        if(upperLowerCase === "lowercase"){
+            upperLowerCase = "uppercase"
+            textArea.style.textTransform = upperLowerCase;
+        }else{
+            upperLowerCase = "lowercase"
+            textArea.style.textTransform = upperLowerCase
         }
     }
 })
